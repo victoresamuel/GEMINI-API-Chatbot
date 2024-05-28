@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="/style.css" />
+    <title>CHATBOT</title>
+  </head>
+  <body>
+    <div id="students-container">
+      <form action="" id="students-form">
+        <p>
+          Seleccione un estudiante para obtener informacion sobre su rendimiento
+          escolar:
+        </p>
+        <select name="" id="students"></select>
+        <p>Seleccione el tipo de informacion que desea consultar:</p>
+        <div class="list-container">
+          <div class="list-item">
+            <input
+              class="radio-input"
+              type="radio"
+              id="detailed"
+              name="info"
+              value="Dame un analisis detallado de un estudiante con las siguientes notas: "
+            />
+            <label class="radio-label" for="detailed">Analisis detallado</label>
+          </div>
+          <div class="list-item">
+            <input
+              class="radio-input"
+              type="radio"
+              id="short"
+              name="info"
+              value="Dame un analisis breve de un estudiante con las siguientes notas: "
+            />
+            <label class="radio-label" for="short">Analisis breve</label>
+          </div>
+          <div class="list-item">
+            <input
+              class="radio-input"
+              type="radio"
+              id="snw"
+              name="info"
+              value="dame las fortalezas y debilidades de un estudiante con las siguientes notas: "
+            />
+            <label class="radio-label" for="snw"
+              >Fortalezas y debilidades</label
+            >
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="submit" id="result">Obtener resultados</button>
+          <button type="submit" id="result-notes">
+            Solo obtener calificaciones
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="chat-container">
+      <h1>CHATBOT</h1>
+      <div id="chat-history">
+        <p class="bot-message">
+          Bienvenido al chatbot administrativo, escribe cualquier consulta que
+          desees y te respondere como me sea posible
+        </p>
+      </div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ingrese su mensaje aqui..."
+        />
+        <button id="send" type="submit">Enviar</button>
+      </form>
+    </div>
+    <div id="loader">
+      <img src="/loader.gif" width="150px" alt="Loading..." />
+    </div>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
